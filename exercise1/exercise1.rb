@@ -26,6 +26,3 @@ puts "\n"
 contacts["Analyn Cajocson"] = assign(contact_data[0])
 contacts["Avion School"] = assign(contact_data[1])
 puts contacts
-
-
-
