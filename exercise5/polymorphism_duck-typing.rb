@@ -1,10 +1,6 @@
 #using duck-typing:
 class Pizza
-    def prepare
-        puts "prepares pizza"
-    end
-
-    def stuffing(type)
+    def prepare(type)
         type.prepare
     end
 end
@@ -24,7 +20,7 @@ end
 
 order = Pizza.new
 thin_crust = ThinCrust.new
-order.stuffing(thin_crust)
+order.prepare(thin_crust)
 
 stuffed_crust = StuffedCrust.new
-order.stuffing(stuffed_crust)
+order.prepare(stuffed_crust)
