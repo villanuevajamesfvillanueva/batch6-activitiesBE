@@ -1,0 +1,7 @@
+#SOLID Principles
+
+#S - Single Responsibility Principle (class/method should be responsible for a small aspect only)
+#O - Open/Closed Principle (should be open for extension and closed for modification)
+#L - Liskov Substitution Principle (superclass method should be overridden by a subclass method for specificity)
+#I - Interface Segregation Principle (segrerate methods that are not really of the 'same vibes')
+#D - Dependency Inversion Principle 

@@ -24,6 +24,6 @@ ans3 = count_positives_sum_negatives([0, 0, 0, 0])
 print ans3
 puts ans3.instance_of? Array
 
-ans3 = count_positives_sum_negatives([1, 1, 1, 1])
-print ans3
-puts ans3.instance_of? Array
+ans4 = count_positives_sum_negatives([1, 1, 1, 1])
+print ans4
+puts ans4.instance_of? Array
