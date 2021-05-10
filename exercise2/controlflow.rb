@@ -1,6 +1,6 @@
-#item 1
-arr = [1, 3, 5, 7, 9, 11]
-number = 3
+# #item 1
+# arr = [1, 3, 5, 7, 9, 11]
+# number = 3
 
 puts (arr.include? 3)
 
@@ -30,14 +30,7 @@ end
 
 #item4
 arr = [6, 3, 1, 8, 4, 2, 10, 65, 102]
+new_arr = []
 
-while (true)
-    print "Please enter an integer number: "
-    num = gets.chomp
-    break if (num.to_i.to_s == num)
-end
-
-if (num.to_i % 2 == 0)
-    arr.push(num.to_i)
-end
-print arr
+arr.each {|x| new_arr.push(x) if x.to_i % 2 == 0  }
+print new_arr
