@@ -5,4 +5,4 @@ def multiTable(number)
 end
 
 puts multiTable(5)
-multiTable(1)
+puts multiTable(1)
