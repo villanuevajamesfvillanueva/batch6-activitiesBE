@@ -1,9 +1,9 @@
+# has many customers through orders
 # has many orders
-# has many baristas though orders
 
-class Customer
+class Barista
     @@all = []
-    attr_accessor :name, :orders
+    attr_accessor :name
 
     def initialize(name)
         @name = name
@@ -14,21 +14,22 @@ class Customer
         @@all << self
     end
 
+    def self.all
+        @@all
+    end
+
     # showing the has many relationships
     # return all the associated orders / reader method
     def orders
         Order.all.select do |order|          # select will return an array
-            order.customer == self
+            order.barista == self
         end
     end
 
-    def baristas
+    def customers
         orders.map do |order|           #create a new array will all of associated barista
-            order.barista
+            order.customer
         end
     end
 
-    def self.all
-        @@all
-    end
 end

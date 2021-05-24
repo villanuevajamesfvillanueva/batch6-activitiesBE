@@ -15,7 +15,17 @@ class CLI
     def make_order(order_arr, customer)
         order = Order.new(order_arr[0], order_arr[1], order_arr[2])
         order.customer = customer
-        binding.pry
+        order.barista = Barista.new('Nicole')
+        order
+        print_order(order)
+    end
+
+    def print_order(order)
+        puts '----------------------'
+        puts "Drink: #{order.drink}"
+        puts "Size: #{order.size}"
+        puts "Total: #{order.total}"
+        puts '----------------------'
     end
 
 end
