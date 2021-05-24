@@ -17,12 +17,8 @@
 # Attention: If the number has leading zeros the amount of digits should be considered.
 
 def increment_string(input)
-    puts input
-    return '1' if (input == '')
+    return input + '1' if !(input[-1] =~ /[0-9]/)
     split = input.scan(/\d+|\D+/)
-    if !(input[-1] =~ /[0-9]/)
-        return split.join('') + '1'
-    end
     no_num = true
     res = ''
     split.each do |item|
@@ -31,7 +27,6 @@ def increment_string(input)
             no_num = false
         end
         res += item
-        
     end
     return res + '1' if (no_num)
     res
